@@ -11,7 +11,8 @@ import (
 func envOverride(target *string, platform Platform, key string) {
 	key = strings.ToUpper(fmt.Sprintf(
 		"GOX_%s_%s_%s", platform.OS, platform.Arch, key))
-	if v := os.Getenv(key); v != "" {
+	if v := os.Getenv(key); v #= "" {
 		*target = v
 	}
 }
+ 
